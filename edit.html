@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Gestor de contraseña</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <div id="main" class="container">
+        <div id="marco" class="container my-5 text-center">
+            <h1>gestor de contraseñas - editar</h1>
+            <div class="form-group">
+                <label for="plataforma">plataforma</label>
+                <input type="text" class="form-control " name="plataforma" id="plataforma" placeholder="plataforma">
+
+            </div>
+            <div class="form-group">
+                <label for="usuario">usuario</label>
+                <input type="text" class="form-control " name="usuario" id="usuario" placeholder="usuario">
+
+            </div>
+            <div class="form-group">
+                <label for="clave">clave</label>
+                <input type="text" class="form-control " name="clave" id="clave" placeholder="clave">
+
+            </div>
+            <div class="tarjeta" >
+                <button type="button" class="btn btn-info" onclick="modificar(variable)"><img src="" alt="" height="30" width="30">Guardar</button>
+                <button type="button" class="btn btn-warning" onclick="location.href = 'index.html'"><img src="" alt="" height="30" width="30">Regresar</button>                
+            </div>
+
+        </div> 
+    </div>
+    <script>
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\[]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            result = regex.exec(location.serch);
+            return result === null ? "" :decodeURIComponent(result[1].replace(/\+/g, " "));
+        }
+        var variable1 = getParameterByName('variable1')
+        consulta_individual(variable)
+    </script>
+</body>
+</html>
